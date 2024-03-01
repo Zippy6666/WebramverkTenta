@@ -1,7 +1,7 @@
 
 class ConfigDebug():
     #SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:password@localhost/tenta1'    # File-based SQL database
-    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:my-secret-pw@localhost/tenta1'
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:my-secret-pw@localhost/tenta1' # Behövde ändra denna för att matcha mitt lösenord
    
     SECRET_KEY = 'SDFA11#'
 

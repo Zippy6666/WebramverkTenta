@@ -1,5 +1,5 @@
 from flask import Flask
-from models import db, seedData, user_datastore, ContactSubmission
+from models import db, seedData, user_datastore, ContactSubmission, Product
 from flask_migrate import Migrate, upgrade
 from flask import  render_template, request, redirect, url_for
 from flask_security import Security
@@ -59,7 +59,7 @@ def startSida() -> str:
 
 @app.route("/products", methods=["GET"])
 def products():
-    return render_template("products.html")
+    return render_template("products.html", products_table=Product.query.all())
 
 
 @app.route("/contact_sucess", methods=["GET"])

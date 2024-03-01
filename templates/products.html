@@ -9,6 +9,25 @@
     <div class="content">
         <h1>Produkter</h1>
         <h2>Här hittar du en lista av våra produkter:</h2>
+    
+        <table class="products">
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Pris</th>
+                    <th>Betyg</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products_table %}
+                <tr>
+                    <td>{{ product.ProductName }}</td>
+                    <td>{{ product.Price }}</td>
+                    <td>{{ product.Rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
 </section>
