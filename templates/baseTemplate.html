@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+</head>
+<body>
+    <header class="siteheader">
+        <div class="logo">
+            <i class='bx bxs-cat logoicon'></i>
+            Cat<span class="logopart2">Lovers</span>                
+        </div>
+        <nav>
+            <ul class="navmenu">
+                <li><a class="headeranchor" href="#home">Home</a></li>
+                <li><a class="headeranchor" href="#">Services</a></li>
+                <li><a class="headeranchor" href="#about">About</a></li>
+            </ul>
+        </nav>
+        <ul class="navicons">
+           <li><a class="navanchor" href="#"><i class='bx bx-search-alt navicon'></i></a></li> 
+           <li><a class="navanchor" href="#"><i class='bx bx-menu navicon' ></i></a></li> 
+        </ul>
+    </header>
+    
+
+        
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+
+
+
+    </main>
+    <footer>
+        (C) Sebastian
+    </footer>
+</body>
+</html>
