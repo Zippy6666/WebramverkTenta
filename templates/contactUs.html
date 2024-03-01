@@ -1,0 +1,46 @@
+{% extends "baseTemplate.html" %}
+
+
+{% block content %}
+
+
+<section class="contact" id="contact">
+
+    <div class="content">
+        <h1>Contact US</h1>
+        <!-- <p>Här kan du kontakta oss.</p> -->
+    </div>
+
+
+    <form action="/contact" method="post" class="content">
+        <p>{{message}}</p>
+
+        <label for="name" >Namn:</label>
+        <input id="name" name="name" required>
+    
+        <label for="email">Epost:</label>
+        <input type="email" id="email" name="email">
+    
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone">
+    
+        <label for="subject">Ärende:</label>
+        <select id="subject" name="subject">
+            <option value="support">Support</option>
+            <option value="försäljning">Försäljning</option>
+            <option value="samarbeten">Samarbeten</option>
+            <option value="övrigt">Övrigt</option>
+        </select>
+
+
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" maxlength="512">
+    
+        <button type="submit">Submit</button>
+    </form>
+
+
+</section>
+
+
+{% endblock  %}
